@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Date;
+//import CargaPersona.java;
+
 
 public class Persona {
 	
@@ -17,6 +19,8 @@ public class Persona {
 	float bonoMovilizacion;
 	String afp;
 	int activo;
+    private static ArrayList<CargaPersona> CargaPersonas;
+
 	public Persona(int id, int rut, int digitoVerificador, String nombre, String apellidoPaterno,
 			String apellidoMaterno, String ciudad, String direccion, Date inicioContrato, float sueldoBase,
 			float bonoColacion, float bonoMovilizacion, String afp, int activo) {
