@@ -15,7 +15,7 @@ import javax.swing.JComboBox;
 import javax.swing.JTextArea;
 
 public class IntergazRemuneraciones extends JFrame {
-	//asd
+	//asdasdasd
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_1;
