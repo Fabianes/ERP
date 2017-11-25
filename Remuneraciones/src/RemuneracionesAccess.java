@@ -19,13 +19,8 @@ public class RemuneracionesAccess {
 	  
 	  public void connectToDB() throws Exception {
           try {
-                  // This will load the MySQL driver, each DB has its own driver
-                  Class.forName("com.mysql.jdbc.Driver");
-
-                  // Setup the connection with the DB
-                  connect = DriverManager.getConnection("jdbc:mysql://" + host + "/"
-                                  + database + "?" + "user=" + user + "&password=" + passwd);
-
+        	  Class.forName("com.mysql.jdbc.Driver");
+              connect = DriverManager.getConnection("jdbc:mysql://" + host + "/"+ database + "?" + "user=" + user + "&password=" + passwd);
           } catch (Exception e) {
                   throw e;
           }
@@ -49,15 +44,15 @@ public class RemuneracionesAccess {
 		          .executeQuery("select * from sistemaremuneraciones.REM_Personal");
 	
 		      while(resultSet.next()) {
-		          String tittle=resultSet.getString("nombre");
-		          System.out.println(tittle);
+		          String nombre=resultSet.getString("nombre");
+		          System.out.println(nombre);
 		      }
 	      
 		  } catch (Exception e) {
 			  throw e;
 		  } finally {
 		      close();
-	    }
+		  }
 
 	  }
 
